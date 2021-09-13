@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.otech</groupId>
+    <artifactId>otech-top</artifactId>
+    <version>1.0.0</version>
+    <modules>
+        <module>otech-top-out</module>
+        <module>otech-top-shipment</module>
+        <module>otech-top-ccp</module>
+        <module>otech-top-inventory</module>
+        <module>otech-top-forex</module>
+
+    </modules>
+    <packaging>pom</packaging>
+    <description>关务处理系统</description>
+
+    <properties>
+        <otech.version>1.0.0</otech.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otechsolution</artifactId>
+                <version>${otech.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otech-common</artifactId>
+                <version>${otech.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otech-datasource-mybatisplus</artifactId>
+                <version>${otech.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otech-oss</artifactId>
+                <version>${otech.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otech-clientinfo</artifactId>
+                <version>${otech.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otech-web</artifactId>
+                <version>${otech.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otech-web-signature</artifactId>
+                <version>${otech.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otech-redis</artifactId>
+                <version>${otech.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.otech</groupId>
+                <artifactId>otech-sqlserver</artifactId>
+                <version>${otech.version}</version>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+</project>

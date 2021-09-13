@@ -1,0 +1,53 @@
+server:
+  port: 8381
+spring:
+  datasource:
+    druid:
+      db1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://rm-bp1977ym6gh4afdao.mysql.rds.aliyuncs.com:3306/payment?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+        username: payment
+        password: 7Jy&5Vy=3Me^0Ns=7Lu(2Fa*1J
+      db2:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://rm-bp1977ym6gh4afdao.mysql.rds.aliyuncs.com:3306/payment?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+        username: payment
+        password: 7Jy&5Vy=3Me^0Ns=7Lu(2Fa*1J
+  redis:
+    host: r-bp1bf2tipu7w1auevc.redis.rds.aliyuncs.com
+    port: 6379
+    database: 3
+    password: upSFfAZOlnXXWO2Z
+
+logging:
+  level:
+    com:
+      otechsolution: info
+      baomidou:
+        example:
+          mapper: error
+
+com:
+  otech:
+    out:
+      data-source:
+        host: http://127.0.0.1:7080
+      signature:
+        enable: true
+        require-url: /out/**
+        ignore-url:
+      ccs:
+        host: https://top.otechsolution.com/
+        userNameOrPhoneOrEmailAddress: 13812900000
+        password: test2020
+        clientId: 2
+        userId: 123456
+        top-url:
+          token: /api/partner_relations_management/login/chattoken
+          logistics: /api/ItemMaster/SaveItemMaster
+          order-header: /api/PurchaseOrder/SavePurchaseOrderHeader
+          order-detail: /api/PurchaseOrder/SavePurchaseOrderDetail
+          billing-header: /api/CostManagement/CostHeaderAdd
+          billing-detail: /api/CostManagement/CostDetailAdd
+swagger:
+  enable: false

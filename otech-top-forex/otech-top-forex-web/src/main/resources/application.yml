@@ -1,0 +1,31 @@
+spring:
+  application:
+    name: foreign exchange
+  profiles:
+    include: mybatis
+    active: dev
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+  servlet:
+    multipart:
+      max-file-size: 1000MB
+      max-request-size: 1000MB
+
+  jackson:
+    default-property-inclusion: ALWAYS
+    serialization:
+      write-dates-as-timestamps: true
+
+  thymeleaf:
+    cache: true
+    prefix: classpath:/templates
+    suffix: .html
+    mode: LEGACYHTML5
+    encoding: utf-8
+    servlet:
+      content-type: text/html
+
+logging:
+  config: classpath:logback-boot.xml

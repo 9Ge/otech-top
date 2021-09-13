@@ -1,0 +1,11 @@
+package com.otechsolution.shipment.service.impl;
+
+import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
+import com.otechsolution.shipment.entity.ShipmentHeaderConsigneeConsignor;
+import com.otechsolution.shipment.mapper.ShipmentHeaderConsigneeConsignorMapper;
+import com.otechsolution.shipment.service.ShipmentHeaderConsigneeConsignorService;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ShipmentHeaderConsigneeConsignorServiceImpl extends ServiceImpl<ShipmentHeaderConsigneeConsignorMapper, ShipmentHeaderConsigneeConsignor> implements ShipmentHeaderConsigneeConsignorService {
+}

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>otech-top</artifactId>
+        <groupId>com.otech</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>otech-top-shipment</artifactId>
+    <packaging>pom</packaging>
+    <description>原始单证模块</description>
+    <modules>
+        <module>otech-top-shipment-pojo</module>
+        <module>otech-top-shipment-service</module>
+        <module>otech-top-shipment-web</module>
+    </modules>
+
+
+</project>

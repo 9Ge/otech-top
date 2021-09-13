@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>otech-top</artifactId>
+        <groupId>com.otech</groupId>
+        <version>1.0.0</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>otech-top-out</artifactId>
+    <description>关务系统对外开放接口</description>
+
+    <properties>
+        <forex.version>1.0.0</forex.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.otech</groupId>
+            <artifactId>otech-http-log</artifactId>
+            <version>${forex.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.otech</groupId>
+            <artifactId>otech-top-forex-service</artifactId>
+            <version>${forex.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.otech</groupId>
+            <artifactId>otech-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.otech</groupId>
+            <artifactId>otech-web-signature</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.otech</groupId>
+            <artifactId>otech-redis</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.otech</groupId>
+            <artifactId>otech-sqlserver</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.otech</groupId>
+            <artifactId>otech-common</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.otech</groupId>
+            <artifactId>customs-parameters-service</artifactId>
+            <version>${otech.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>com.otech</groupId>
+                    <artifactId>otech-dynamic-datasource</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>otech-top-out</finalName>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+</project>

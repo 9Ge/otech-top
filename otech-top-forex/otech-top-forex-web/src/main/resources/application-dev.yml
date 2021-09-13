@@ -1,0 +1,38 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    druid:
+      db1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.30.55:3306/payment?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+      db2:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.30.55:3306/payment?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+
+  redis:
+    host: 192.168.30.55
+    port: 6379
+    database: 7
+    password:
+
+logging:
+  level:
+    com.otechsolution: debug
+    io.swagger.models.parameters.AbstractSerializableParameter: error
+
+com:
+  otech:
+    forex:
+      client-info:
+        auth-url: http://192.168.30.55:8080/api/DeskTop/GetClient
+        require-url: /api/**
+        ignore-url:
+          - /api/ocr/callback
+          - /api/ocr/revise
+swagger:
+  enable: true

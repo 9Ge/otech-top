@@ -1,0 +1,58 @@
+server:
+  port: 8081
+spring:
+  datasource:
+    druid:
+      db1:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.30.55:3306/payment?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+      db2:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://192.168.30.55:3306/payment?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+        username: root
+        password: 123456
+
+  redis:
+    host: 192.168.30.55
+    port: 6379
+    database: 8
+    password:
+
+logging:
+  level:
+    com:
+      otechsolution: debug
+      baomidou:
+        example:
+          mapper: debug
+    io.swagger.models.parameters.AbstractSerializableParameter: error
+
+
+com:
+  otech:
+    out:
+      data-source:
+        host: http://127.0.0.1:7080
+      signature:
+        enable: false
+        require-url: /out/**
+        ignore-url:
+      ccs:
+        host: http://192.168.30.55:8080
+        userNameOrPhoneOrEmailAddress: test@ttstms.com
+        password: Otech@6666
+        clientId: 2
+        userId: 2
+        top-url:
+          token: /api/partner_relations_management/login/token
+          logistics: /api/ItemMaster/SaveItemMaster
+          order-header: /api/PurchaseOrder/SavePurchaseOrderHeader
+          order-detail: /api/PurchaseOrder/SavePurchaseOrderDetail
+          billing-header: /api/CostManagement/CostHeaderAdd
+          billing-detail: /api/CostManagement/CostDetailAdd
+          billing-detail-update: /api/CostManagement/BillingDetailUpdate
+
+swagger:
+  enable: true

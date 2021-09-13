@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: otech top out app
+  profiles:
+    include: mybatis
+    active: prod
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  jackson:
+    default-property-inclusion: ALWAYS
+    serialization:
+      write-dates-as-timestamps: true
+
+logging:
+  config: classpath:logback-boot.xml
